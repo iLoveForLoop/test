@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <style>
+        body{
+            background-color: #ffffff;
+            transition: ease-in-out .4s;
+            color: #ffff;
+            
+            
+        }
+        #container{
+            margin: 50px auto;
+            flex-direction: row;
+            padding: 15px 0;
+            text-align: center;
+            align-content: center;
+            max-width: 500px;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 10px;
+            border: 2px solid rgb(255, 255, 255);
+            transition: ease-in-out .3s;
+        }
+
+        #container:hover{
+            border: 2px solid rgb(255, 0, 234);
+        }
+
+        #title{
+            color: #ffffff;
+            transition: ease-in-out .3s;
+        }
+
+        #container:hover  #title{
+            color: rgb(255, 0, 234);
+        }
+
+        #container:hover li{
+            color: #ffffff;
+            background-color: rgb(255, 0, 234);
+        }
+
+        #container:hover li:hover{
+            color: #000000;
+            background-color: rgb(255, 255, 255);
+        }
+
+        ul{
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            margin: auto;
+            margin-bottom: 10px;
+            padding: 15px 25px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 50%;
+            transition: ease-in-out .3s;
+        }
+
+    </style>
+</head> 
+<body>
+    <div id="container">
+        <h1 id="title">MY BINI RANKING</h1>
+        <ul>
+            <li class="item-1" id="jhoanna">BINI JHOANNA</li>
+            <li class="items" id="stacey">BINI STACEY</li>
+            <li class="items" id="colet">BINI Colet</li>
+            <li class="items" id="gwen">BINI Gwen</li>
+            <li class="items" id="sheena">BINI Sheena</li>
+            <li class="items" id="aiah">BINI Aiah</li>
+            <li class="items" id="mikha">BINI Mikha</li>
+            <li class="items" id="maloi">BINI Maloi</li>
+        </ul>
+    </div>
+
+    <script>
+
+        const container = document.querySelector('#container')
+        const body = document.body;
+
+        container.addEventListener('mouseover', function(event){
+            if(event.target.id === 'jhoanna'){
+                body.style.backgroundColor = '#0F2CB3'
+            }else if(event.target.id === 'stacey'){
+                body.style.backgroundColor = '#F6C6BD'
+            }else if(event.target.id === 'colet'){
+                body.style.backgroundColor = '#32CD32'
+            }else if(event.target.id === 'gwen'){
+                body.style.backgroundColor = '#FFB341'
+            }else if(event.target.id === 'sheena'){
+                body.style.backgroundColor = '#9c50b6'
+            }else if(event.target.id === 'aiah'){
+                body.style.backgroundColor = '#008691'
+            }else if(event.target.id === 'mikha'){
+                body.style.backgroundColor = '#F7342B'
+            }else if(event.target.id === 'maloi'){
+                body.style.backgroundColor = '#FFC40C'
+            }
+        })
+
+        container.addEventListener('mouseout', function(event){
+            if(event.target.tagName === 'LI'){
+                body.style.background = ''
+            }
+        })
+    </script>
+</body>
+</html>
